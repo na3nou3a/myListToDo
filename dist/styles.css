@@ -1,0 +1,350 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Mali:ital,wght@1,600;1,700&display=swap');
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* Colors */
+  --clr-black: rgb(0, 0, 0);
+  --clr-black-2: #222;
+  --clr-white: #fff;
+  --clr-grey-light: #eee;
+  --clr-grey-dark: rgb(133, 129, 129);
+  --clr-blue-dark: hsl(205, 86%, 17%);
+  --clr-blue-light: #49a6e9;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  /* Font Family */
+  --ff-primary: 'Mali', cursive;
+  --ff-secondary: 'Fira Sans', sans-serif;
+  /* Size */
+  --max-width: 900px;
+  --fixed-width: 620px;
+  /* Others */
+  --spacing: 1.8px;
+  --radius: 4px;
+  --line-height: 1.25;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  text-align: center;
+}
+body {
+  font-family: var(--ff-secondary);
+  color: black;
+  background-color: lavenderblush;
+  background-size: cover;
+  line-height: var(--line-height);
+  letter-spacing: 2px; 
+  font-size: 100%;
+}
+
+input, button {
+  border: none;
+}
+input:focus, button:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 2.5px;
+  text-transform: capitalize;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  * {
+    font-size: 1.2rem;
+  }
+  h1,
+  h2,
+  h3 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+
+.btn {
+  cursor: pointer;
+  text-align: center;
+  text-transform: capitalize;
+  background: transparent;
+  border: none;
+}
+
+
+/* section */
+
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: var(--max-width);
+  margin-top: 8rem;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+main {
+  min-height: 100vh;
+}
+/*
+=============== 
+To Do List
+===============
+*/
+
+header {
+  background-color: rgb(117, 4, 197);
+  text-align: center;
+  padding: 1rem 0;
+  color: crimson;
+}
+
+footer {
+  text-align: center;
+  padding: 0.5rem 0;
+  background-color: rgb(206, 163, 240);
+}
+
+.section-center {
+  background-color: var(--clr-white);
+  background-image: url(./images/colors2.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: var(--radius);
+  -webkit-box-shadow: var(--light-shadow);
+          box-shadow: var(--light-shadow);
+}
+.section-center:hover {
+  -webkit-box-shadow: var(--dark-shadow);
+          box-shadow: var(--dark-shadow);
+}
+
+/* Form Elements */
+.alert {
+  margin-bottom: 1rem;
+  padding: 0.4rem;
+  border-radius: var(--radius);
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  font-size: 0.875rem;
+}
+.alert-danger {
+  color: #721c24;
+  background: #f8d7da;
+}
+.alert-success {
+  color: #155724;
+  background: #d4edda;
+}
+.tasks-form h3 {
+  color: rgb(7, 7, 107);
+  margin-bottom: 1.5rem;
+}
+.form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#task-input {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  text-align: left;
+}
+
+#task-input::-webkit-input-placeholder {
+  font-family: var(--ff-secondary);
+  color: var(--clr-black-2);
+  
+}
+
+#task-input::-moz-placeholder {
+  font-family: var(--ff-secondary);
+  color: var(--clr-black-2);
+  
+}
+
+#task-input:-ms-input-placeholder {
+  font-family: var(--ff-secondary);
+  color: var(--clr-black-2);
+  
+}
+
+#task-input::-ms-input-placeholder {
+  font-family: var(--ff-secondary);
+  color: var(--clr-black-2);
+  
+}
+
+#task-input::placeholder {
+  font-family: var(--ff-secondary);
+  color: var(--clr-black-2);
+  
+}
+
+.submit {
+  background: var(--clr-blue-light);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 3rem;
+          flex: 0 0 3rem;
+  padding: 0.5rem;  
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+.submit:hover {
+  background: var(--clr-blue-dark);
+  color: var(--clr-white);
+}
+
+.tasks-container {
+  margin-top: 2rem;
+  visibility: hidden;
+}
+.show-container {
+  visibility: visible;
+}
+
+.task-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 1rem;
+  border-radius: var(--radius);
+  text-transform: capitalize;
+  background-color: white;
+}
+.task-item:hover {
+  background: var(--clr-grey-light);
+}
+
+.title {
+  margin: 0%;
+  margin-left: 0.5rem;
+  text-align: left;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+}
+.edit,
+.delete, 
+.check,
+.clear {
+  border-radius: var(--radius);
+}
+
+.edit,
+.delete, 
+.check {
+  margin: 0 0.15rem;
+  padding: 0.1rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.delete:hover {
+  background-color: var(--clr-red-dark);
+}
+
+.edit:hover {
+  background-color: var(--clr-green-dark);
+}
+
+.check:hover {
+  background-color: green;
+}
+
+.clear {
+  max-width: 8rem;
+  padding: 0.4rem;
+  color: var(--clr-red-light);
+  background-color: var(--clr-black-2);
+  margin: 1.25rem auto 0;
+}
+.clear:hover {
+  color: var(--clr-black);
+  background-color: var(--clr-red-light);
+}
+
+.bcgGreen {
+  background-color: green;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "mylisttodo",
+  "version": "1.0.0",
+  "description": "> ## From The Odin Project's [curriculum](https://www.theodinproject.com/courses/javascript/lessons/todo-list)",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack --mode development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
