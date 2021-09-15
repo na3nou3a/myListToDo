@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List To Do</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>List To Do</h1>
+    </header>
+    <main>
+    <section class="section-center">
+      <!-- form -->
+      <form id="form" class="tasks-form">
+        <p id="alert" class="alert"></p>
+        <h3>My tasks</h3>
+        <div class="form-control">
+          <input type="text" id="task-input" placeholder="e.g. buy eggs" />
+          <button type="submit" class="submit btn">+add</button>
+        </div>
+      </form>
+      <!-- list -->
+      <div class="tasks-container">
+        <div class="tasks-list">
+        </div>
+
+        <button class="clear btn">clear items</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy;Copyright: 2021</p>
+  </footer>
+    <!-- javascript -->
+    <script src="./bundle.js"></script>
+  </body>
+</html>
+
